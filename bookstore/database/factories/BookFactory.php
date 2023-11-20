@@ -17,7 +17,11 @@ class BookFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'cim'=>fake()->words(3),
+            'megjelenes_datuma'=> fake()->date('Y-m-d'),
+            'mufaj'=>fake()->words(1),
+            'iroja'=>fake()->name(),
+            'ar'=>fake('HU-HU')->numberBetween(0,50000),
         ];
     }
 }

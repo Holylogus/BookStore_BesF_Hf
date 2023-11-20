@@ -16,12 +16,13 @@ class BookFactory extends Factory
      */
     public function definition(): array
     {
+        $faker = \Faker\Factory::create();
         return [
-            'cim'=>fake()->words(3),
-            'megjelenes_datuma'=> fake()->date('Y-m-d'),
-            'mufaj'=>fake()->words(1),
-            'iroja'=>fake()->name(),
-            'ar'=>fake('HU-HU')->numberBetween(0,50000),
+            'cim'=>$faker->words(3),
+            'megjelenes_datuma' => $faker->date(),
+            'mufaj'=>$faker->words(1),
+            'iroja'=>$faker->name(),
+            'ar'=>$faker->numberBetween(0,50000),
         ];
     }
 }

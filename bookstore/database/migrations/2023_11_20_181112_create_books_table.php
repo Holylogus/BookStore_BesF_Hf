@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('books', function (Blueprint $table) {
             $table->id('book_id');
             $table->string('cim');
-            $table->date('megjeneles_datuma');
+            $table->date('megjelenes_datuma');
             $table->string('mufaj');
             $table->string('iroja');
             $table->integer('ar');
